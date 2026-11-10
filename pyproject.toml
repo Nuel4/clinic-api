@@ -1,0 +1,18 @@
+[project]
+name = "clinic-api"
+version = "0.1.0"
+description = "Clinic appointment booking API built with FastAPI and SQLAlchemy"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+extend-exclude = ["migrations/versions"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
